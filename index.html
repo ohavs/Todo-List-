@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon_io/android-chrome-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Playfair+Display:ital,wght@0,500;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohav | todo list app</title>
+</head>
+
+<body id="body">
+    <div class="list">
+        <div class="headline">
+            <h1 id="h1">
+                to do list
+            </h1>
+            <img src="" alt="" id="avatar">
+        </div>
+
+        <div class="welcome">
+            <h3 id="h3"></h3>
+        </div>
+        
+        <div class="userName">
+            <form id="form">
+                <input onkeydown="return /[a-z א-ת space]/i.test(event.key)" id="userNameInput" placeholder="enter your name" class="userInput" >
+                <input onkeydown="return /[a-z א-ת space]/i.test(event.key)" id="updateUserNameInput" placeholder="enter your name" class="userInput hidden" >
+                <select name="" id="select">
+                    <option value="Select Gender" disabled="disabled" selected="false">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="x">I'm not sure</option>
+                </select>
+                <input type="submit" value="enter" id="userNameBtn" class="userBtn">
+                <input type="submit" value="enter" id="updateUserBtn" class="userBtn">
+            </form>
+        </div>
+        <form class="todoForm">
+            <input type="text" name="todo" placeholder="Create a new todo" id="input">
+            <input type="text" placeholder=" end date" id="endDate"
+                    onfocus="(this.type='date')">
+            <input type="text" placeholder=" end time" id="endTime"
+            onfocus="(this.type='time')">
+            <input type="submit" value="add" id="addTodoBtn">
+        </form>
+       
+        <ul class="list-group" id="ul">
+        </ul>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
