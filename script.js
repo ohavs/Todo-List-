@@ -42,6 +42,7 @@ function loadUserName(){
             event.preventDefault();
             changeNameBtn.classList.add("changeNameBtn");
             changeNameBtn.innerText="Change name";
+            userNameButton.classList.toggle("hidden")
             welcomeDiv.appendChild(changeNameBtn);
             changeUserName(changeNameBtn);
             const upperCaseLetter=userName.charAt(0).toUpperCase();
@@ -65,12 +66,13 @@ function loadUserName(){
             }
             saveUserName(userNameUpperCase,avatar.src)
             }
-           
+            window.location.reload()
+
         })
        
     }   
     else{
-        userNameButton.classList.toggle("hidden")
+        userNameButton.classList.add("hidden")
         changeNameBtn.classList.add("changeNameBtn");
         changeNameBtn.innerText="Change name";
         welcomeDiv.appendChild(changeNameBtn);
@@ -85,7 +87,7 @@ function loadUserName(){
         h3.innerText=`welcome, ${user}.`;
         userNameInput.classList.add("hidden");
         select.classList.add("hidden");
-    
+        
     }
 }
 
@@ -95,7 +97,7 @@ function changeUserName(changeNameBtn){
         event.preventDefault();
         userNameInput.classList.add("hidden");
         updateUserInput.classList.toggle("hidden");
-        userNameButton.classList.toggle("hidden")
+        userNameButton.classList.remove("hidden")
         select.classList.toggle("hidden");
         userNameButton.addEventListener("click",function(event){
             event.preventDefault();
@@ -200,6 +202,7 @@ function invalidInput(element){
     element.style.border="1px solid #FE5139";
     setTimeout(() => {element.style.border="none"}, 1000);
     setTimeout(() => {element.classList.remove("invalidInput")}, 800);
+    
 }
 
 

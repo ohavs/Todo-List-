@@ -108,6 +108,7 @@ select{
     border-radius: 0.5rem;
     border-style: none;
     text-align: center;
+    cursor: pointer;
 }
 
 .welcome{
@@ -128,10 +129,11 @@ select{
   
 }
 #userNameBtn{
-    display: none;
+    /* display: none; */
 }
 #updateUserBtn{
     display: none;
+    
 }
 
 #userNameBtn:hover{
