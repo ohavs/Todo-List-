@@ -215,7 +215,13 @@ display: flex;
 }
 
 #addTodoBtn{
-    display: none;
+    /* display: none; */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 1rem;
+    font-size: 1rem;
 }
 
 /* todos  */
@@ -486,5 +492,8 @@ background-color: var(--warning);
     #form{
         display: flex;
         flex-direction: column;
+    }
+    #addTodoBtn{
+        margin: 1rem 1rem;
     }
   }
