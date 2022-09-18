@@ -107,6 +107,7 @@ select{
     background-color: transparent;
     border-radius: 0.5rem;
     border-style: none;
+    text-align: center;
 }
 
 .welcome{

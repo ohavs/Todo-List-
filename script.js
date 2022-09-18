@@ -70,7 +70,7 @@ function loadUserName(){
        
     }   
     else{
-    
+        userNameButton.classList.toggle("hidden")
         changeNameBtn.classList.add("changeNameBtn");
         changeNameBtn.innerText="Change name";
         welcomeDiv.appendChild(changeNameBtn);
@@ -95,6 +95,7 @@ function changeUserName(changeNameBtn){
         event.preventDefault();
         userNameInput.classList.add("hidden");
         updateUserInput.classList.toggle("hidden");
+        userNameButton.classList.toggle("hidden")
         select.classList.toggle("hidden");
         userNameButton.addEventListener("click",function(event){
             event.preventDefault();
