@@ -114,14 +114,22 @@ select{
 }
 
 .userBtn{
-    width: 5rem;
-    height: 2.4rem;
-    color: aliceblue;
-    border-radius: 2rem;
-    border-style: none;
+    /* width: 5rem; */
+    /* height: 2.4rem; */
+    /* color: aliceblue; */
+    /* border-radius: 2rem; */
+    /* border-style: none; */
+    border: none;
+    background-color: transparent;
     padding: 0.5rem;
-    background-color: var(--light-blue);
+    /* background-color: var(--light-blue); */
     font-family: 'Poppins', sans-serif;
+  
+}
+#userNameBtn{
+    display: none;
+}
+#updateUserBtn{
     display: none;
 }
 
@@ -495,5 +503,8 @@ background-color: var(--warning);
     }
     #addTodoBtn{
         margin: 1rem 1rem;
+    }
+    #userNameBtn{
+        display: inline;
     }
   }
