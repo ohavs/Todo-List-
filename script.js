@@ -210,7 +210,10 @@ function invalidInput(element){
 function deleteTodo(trash,todoDates){
     trash.addEventListener("click",function(){
         let li=this.parentElement.parentElement;
-        ul.removeChild(li);
+        
+        li.classList.add("bounceOut")
+        setTimeout(() => {   ul.removeChild(li);}, 650);
+     
        todoDates.classList.add("hidden");
         removeFromLocalStorage(li,todoDates);
     })
